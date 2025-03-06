@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var noPhotoText: TextView
     private lateinit var selectButton: Button
     private lateinit var sendButton: Button
+    private lateinit var websiteButton: Button
     
     private var selectedImageUri: Uri? = null
     private var tempImagePath: String? = null
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         noPhotoText = findViewById(R.id.noPhotoText)
         selectButton = findViewById(R.id.selectButton)
         sendButton = findViewById(R.id.sendButton)
+        websiteButton = findViewById(R.id.websiteButton)
         
         // Buton tıklama olaylarını ayarla
         selectButton.setOnClickListener {
@@ -54,6 +56,17 @@ class MainActivity : AppCompatActivity() {
         sendButton.setOnClickListener {
             sendImageToDetailActivity()
         }
+        
+        websiteButton.setOnClickListener {
+            openMilliyetWebsite()
+        }
+    }
+    
+    private fun openMilliyetWebsite() {
+        val url = "https://www.milliyet.com.tr"
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        startActivity(intent)
     }
     
     private fun checkPermissionAndOpenGallery() {
