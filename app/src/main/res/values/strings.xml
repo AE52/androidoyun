@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Foto Galeri</string>
+    <string name="select_photo">Fotoğraf Seç</string>
+    <string name="send_photo">Fotoğrafı Gönder</string>
+    <string name="photo_detail">Fotoğraf Detayı</string>
+    <string name="back">Geri</string>
+    <string name="no_photo_selected">Henüz fotoğraf seçilmedi</string>
+</resources> 
